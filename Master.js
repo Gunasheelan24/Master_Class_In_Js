@@ -72,9 +72,17 @@ class PlayerDetail extends PlayerName {
   }
 }
 
-const PlayerTwo = new PlayerDetail(
+class PlayerLevel extends PlayerDetail {
+  constructor(gameName, playerName, health, lives, level) {
+    super(gameName, playerName, health, lives);
+    this.level = level;
+  }
+}
+
+const PlayerTwo = new PlayerLevel(
   "DEMON SLAYER",
   "RENGOKU KYOJURO",
   "100%",
-  5
+  5,
+  80
 );
